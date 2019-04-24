@@ -24,8 +24,8 @@ _type2str = {
     13: ' BIOS Language',
     14: ' Group Associations',
     15: ' System Event Log',
-    16: ' Physical Memory Array',
-    17: ' Memory Device',
+    16: ' Physical Memory Array',#
+    17: ' Memory Device', #
     18: ' 32-bit Memory Error',
     19: ' Memory Array Mapped Address',
     20: ' Memory Device Mapped Address',
@@ -50,7 +50,8 @@ _type2str = {
     39: ' Power Supply',
     40: ' Additional Information',
     41: ' Onboard Devices Extended Information',
-    42: ' Management Controller Host Interface'
+    42: ' Management Controller Host Interface',
+    204: 'HP ProLiant System/Rack Locator'
 }
 _str2type = {}
 for type_id, type_str in _type2str.items():
@@ -115,6 +116,7 @@ def get_by_type(type_id):
     40   Additional Information
     41   Onboard Devices Extended Information
     42   Management Controller Host Interface
+    204  HP ProLiant System/Rack Locator
     """
     if isinstance(type_id, str):
         type_id = _str2type[type_id]
